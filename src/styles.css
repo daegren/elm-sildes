@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2em;
+  z-index: 1;
+}
+
+#pages {
+}
+
+#pages .page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: left 1s ease-in;
+  overflow: hidden;
+}
+
+#pages .page.hidden {
+  display: none;
+}
+
+#pages .page img {
+  margin: auto;
+}
+
+#pages .page.next {
+  left: 100%;
+}
+
+#pages .page.current {
+  left: 0;
+}
+
+#pages .page.prev {
+  left: -100%;
+}
